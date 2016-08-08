@@ -51,7 +51,6 @@ var createRibbon = function(){
   var ribbonWrapper = document.createElement("div");
   ribbonWrapper.className = 'github-fork-ribbon-wrapper fixed';
   ribbonWrapper.id = "production-danger";
-  ribbonWrapper.onclick = function(){ this.style.display='none'; };
 
   var ribbon = document.createElement("div");
   ribbon.className = 'github-fork-ribbon';
