@@ -71,8 +71,8 @@
   width: 100%;
   border: 4px solid rgba(189, 62, 62, 0.75);
   box-sizing: border-box;
-   animation: fadeIn 1.5s infinite alternate;
-}
+  -webkit-animation: fadeIn 1.5s infinite alternate;
+          animation: fadeIn 1.5s infinite alternate;}
 
 .github-fork-ribbon-wrapper.fixed {
   position: fixed;
@@ -146,6 +146,10 @@
 }
 
 /* Pulse Animation */
-@keyframes fadeIn {
+@-webkit-keyframes fadeIn {
   from { opacity: 0; }
+}
+
+@keyframes fadeIn {
+from { opacity: 0; }
 }
