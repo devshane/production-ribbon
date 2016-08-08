@@ -49,7 +49,7 @@ Creates a new ribbon.
 */
 var createRibbon = function(){
   var ribbonWrapper = document.createElement("div");
-  ribbonWrapper.className = 'github-fork-ribbon-wrapper fixed';
+  ribbonWrapper.className = 'github-fork-ribbon-wrapper fixed pulse animated infinite';
   ribbonWrapper.id = "production-danger";
 
   var ribbon = document.createElement("div");
