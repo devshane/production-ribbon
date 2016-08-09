@@ -7,10 +7,10 @@
       "storage"
    ],
    "browser_action": {
-      "default_icon": {                    // optional
-      "19": "images/icon19.png",           // optional
-      "38": "images/icon38.png"            // optional
-      },
+      "default_icon": {
+      "19": "icon-toxic.png",
+      "38": "icon-toxic@2x.png"
+      }
    },
    "background":{
       "scripts":[
