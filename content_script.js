@@ -49,14 +49,14 @@ Creates a new ribbon.
 */
 var createRibbon = function(){
   var ribbonWrapper = document.createElement("div");
-  ribbonWrapper.className = 'github-fork-ribbon-wrapper fixed pulse animated infinite';
+  ribbonWrapper.className = 'overlay fixed pulse animated infinite';
   ribbonWrapper.id = "production-danger";
 
   var ribbon = document.createElement("div");
-  ribbon.className = 'github-fork-ribbon';
+  ribbon.className = 'message';
 
   var ribbonText = document.createElement("span");
-  ribbonText.className = 'github-fork-ribbon-text';
+  ribbonText.className = 'message__text';
 
   var text = document.createTextNode("Production");
 
