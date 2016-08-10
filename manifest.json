@@ -8,8 +8,8 @@
    ],
    "browser_action": {
       "default_icon": {
-      "19": "icon-toxic.png",
-      "38": "icon-toxic@2x.png"
+      "19": "icon-skull.png",
+      "38": "icon-skull@2x.png"
       }
    },
    "background":{
