@@ -1,5 +1,5 @@
 /* Set the overlay */
-.overlay {
+.danejurr-overlay {
   position: absolute;
   z-index: 99998;
   pointer-events: none;
@@ -10,17 +10,17 @@
   width: 100%;
   border: 4px solid rgba(189, 62, 62, 0.75);
   box-sizing: border-box;
-  -webkit-animation: fadeIn 2s infinite alternate;
-          animation: fadeIn 2s infinite alternate;
+  -webkit-animation: danejurr-fadeIn 2s infinite alternate;
+          animation: danejurr-fadeIn 2s infinite alternate;
 }
 
 /* Keep the overlay fixed in the viewport */
-.overlay.fixed {
+.danejurr-overlay.danejurr-fixed {
   position: fixed;
 }
 
 /* Set up the message block */
-.message {
+.danejurr-message {
   position: absolute;
   width: 100%;
   padding: 2px 0;
@@ -31,29 +31,29 @@
 }
 
 /* Fade the overlay and message on hover */
-.message:hover,
-.message:hover .overlay {
+.danejurr-message:hover,
+.danejurr-message:hover .danejurr-overlay {
   opacity: 0.1;
 }
 
 /* Style message text */
-.message__text {
+.danejurr-message__text {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 18px;
+  font-size: 1.75rem;
   font-weight: 500;
   color: #fff;
   letter-spacing: 1px;
   text-align: center;
   cursor: pointer;
   display: inline-block;
-  padding: 5px 0;
+  padding: .5rem 0;
 }
 
 /* Pulse Animation */
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes danejurr-fadeIn {
   from { opacity: .5; }
 }
 
-@keyframes fadeIn {
+@keyframes danejurr-fadeIn {
   from { opacity: .5; }
 }

@@ -49,14 +49,14 @@ Creates a new ribbon.
 */
 var createRibbon = function(){
   var ribbonWrapper = document.createElement("div");
-  ribbonWrapper.className = 'overlay fixed pulse animated infinite';
+  ribbonWrapper.className = 'danejurr-overlay danejurr-fixed danejurr-fadeIn';
   ribbonWrapper.id = "production-danger";
 
   var ribbon = document.createElement("div");
-  ribbon.className = 'message';
+  ribbon.className = 'danejurr-message';
 
   var ribbonText = document.createElement("span");
-  ribbonText.className = 'message__text';
+  ribbonText.className = 'danejurr-message__text';
 
   var text = document.createTextNode("Production");
 
