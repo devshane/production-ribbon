@@ -1,68 +1,7 @@
-/* Left will inherit from right (so we don't need to duplicate code) */
-.github-fork-ribbon {
-  /* The right and left classes determine the side we attach our banner to */
+/* Set the overlay */
+.overlay {
   position: absolute;
-  width: 100%;
-
-  /* Add a bit of padding to give some substance outside the "stitching" */
-  padding: 2px 0;
-
-  /* Set the base colour */
-  background-color: rgba(189, 62, 62, 0.75);
-
-  /* Set the font */
-  font: 700 18px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: center;
-  z-index: 2000000000;
-
-  pointer-events: none;
-  transition: opacity 200ms;
-
-}
-
-.github-fork-ribbon:hover,
-.github-fork-ribbon:hover .github-fork-ribbon-wrapper  {
-  opacity: 0.1;
-}
-
-.github-fork-ribbon.red {
-  background-color: #a00;
-}
-
-.github-fork-ribbon.green {
-  background-color: #090;
-}
-
-.github-fork-ribbon.black {
-  background-color: #333;
-}
-
-.github-fork-ribbon.orange {
-  background-color: #f80;
-}
-
-.github-fork-ribbon .github-fork-ribbon-text {
-
-  /* Set the text properties */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  color: #fff;
-  letter-spacing: 1px;
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-
-  /* Set the layout properties */
-  display: inline-block;
-  padding: 5px 0;
-
-}
-
-/* Hijack the ribbon wrapper to add an overlay */
-.github-fork-ribbon-wrapper {
-  position: absolute;
-  z-index: 99999;
+  z-index: 99998;
   pointer-events: none;
   top: 0;
   left: 0;
@@ -72,77 +11,42 @@
   border: 4px solid rgba(189, 62, 62, 0.75);
   box-sizing: border-box;
   -webkit-animation: fadeIn 2s infinite alternate;
-          animation: fadeIn 2s infinite alternate;}
+          animation: fadeIn 2s infinite alternate;
+}
 
-.github-fork-ribbon-wrapper.fixed {
+/* Keep the overlay fixed in the viewport */
+.overlay.fixed {
   position: fixed;
 }
 
-.github-fork-ribbon-wrapper.left {
-  left: 0;
+/* Set up the message block */
+.message {
+  position: absolute;
+  width: 100%;
+  padding: 2px 0;
+  background-color: rgba(189, 62, 62, 0.75);
+  text-align: center;
+  pointer-events: none;
+  z-index: 99999;
 }
 
-.github-fork-ribbon-wrapper.right {
-  right: 0;
+/* Fade the overlay and message on hover */
+.message:hover,
+.message:hover .overlay {
+  opacity: 0.1;
 }
 
-.github-fork-ribbon-wrapper.left-bottom {
-  position: fixed;
-  top: inherit;
-  bottom: 0;
-  left: 0;
-}
-
-.github-fork-ribbon-wrapper.right-bottom {
-  position: fixed;
-  top: inherit;
-  bottom: 0;
-  right: 0;
-}
-
-.github-fork-ribbon-wrapper.right .github-fork-ribbon {
-  top: 42px;
-  right: -43px;
-
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.github-fork-ribbon-wrapper.left .github-fork-ribbon {
-  top: 42px;
-  left: -43px;
-
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-
-.github-fork-ribbon-wrapper.left-bottom .github-fork-ribbon {
-  top: 80px;
-  left: -43px;
-
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.github-fork-ribbon-wrapper.right-bottom .github-fork-ribbon {
-  top: 80px;
-  right: -43px;
-
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+/* Style message text */
+.message__text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 0;
 }
 
 /* Pulse Animation */
@@ -151,5 +55,5 @@
 }
 
 @keyframes fadeIn {
-from { opacity: .5; }
+  from { opacity: .5; }
 }
