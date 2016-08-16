@@ -49,15 +49,14 @@ Creates a new ribbon.
 */
 var createRibbon = function(){
   var ribbonWrapper = document.createElement("div");
-  ribbonWrapper.className = 'github-fork-ribbon-wrapper right fixed';
+  ribbonWrapper.className = 'danejurr-overlay danejurr-fixed danejurr-fadeIn';
   ribbonWrapper.id = "production-danger";
-  ribbonWrapper.onclick = function(){ this.style.display='none'; };
 
   var ribbon = document.createElement("div");
-  ribbon.className = 'github-fork-ribbon red';
+  ribbon.className = 'danejurr-message';
 
   var ribbonText = document.createElement("span");
-  ribbonText.className = 'github-fork-ribbon-text';
+  ribbonText.className = 'danejurr-message__text';
 
   var text = document.createTextNode("Production");
 

@@ -73,8 +73,8 @@ function deactivateProductionDangerOnTab(tab){
   setBlackIcon(tab);
 }
 
-var BLACK_ICON_PATH = 'black-icon.png';
-var RED_ICON_PATH = 'red-icon.png';
+var BLACK_ICON_PATH = 'icon-skull@2x.png';
+var RED_ICON_PATH = 'icon-skull--active@2x.png';
 
 function setBlackIcon(tab){
   setIcon(BLACK_ICON_PATH, tab);
