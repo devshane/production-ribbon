@@ -1,7 +1,7 @@
 /* Set the overlay */
 .danejurr-overlay {
   position: absolute;
-  z-index: 99998;
+  z-index: 9999999999;
   pointer-events: none;
   top: 0;
   left: 0;
